@@ -1,0 +1,20 @@
+﻿@page "{handler?}"
+@model WebAppCoreProduct.Pages.ProductModel
+
+
+
+<form method="post">
+    <label for="name">Название товара</label><br />
+    <input type="text" name="name" /><br />
+    <label for="price">Цена</label><br />
+    <input type="number" name="price" /><br /><br />
+    <input type="submit" asp-page-handler="" value="Получить скидку" /><br />
+    <label for="discount">Введите свою скидку(%)</label><br />
+    <input type="number" name="discount" /><br />
+    <input type="submit" asp-page-handler="Discount" value="С учетом своей скидки" /><br />
+    <label for="promo">Введите промо-код</label><br />
+    <input type="text" name="promo" /><br />
+    <input type="submit" asp-page-handler="Promo" value="С учетом своей скидки" /><br />
+</form>
+
+<h3>@Model.MessageResult</h3>

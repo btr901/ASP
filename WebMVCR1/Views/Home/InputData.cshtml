@@ -1,0 +1,48 @@
+﻿@model WebMVCR1.Models.Person
+@{
+    ViewBag.Title = "Ввод данных";
+}
+<div>
+@using (Html.BeginForm())
+    {
+        <table>
+            <tr>
+                <td><p>Введите имя:</p></td>
+                <td>@Html.TextBox("FirstName")</td>
+            </tr>
+            <tr>
+                <td><p>Введите фамилию:</p></td>
+                <td>@Html.TextBoxFor(x => x.LastName)</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Отправить" />
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    }
+</div>
+@*
+  
+<div>
+    <form method="post">
+        <table>
+            <tr>
+                <td><p>Введите имя:</p></td>
+                <td><input type="text" name="FirstName" /> </td>
+            </tr>
+            <tr>
+                <td><p>Введите фамилию:</p></td>
+                <td><input type="text" name="LastName" /> </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Отправить" />
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</div>
+*@
